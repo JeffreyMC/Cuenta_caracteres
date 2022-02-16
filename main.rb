@@ -6,9 +6,7 @@ total_palabras = 0
 
 #lee archivo
 File.readlines("texto.txt").each {|linea|
-    if linea.length != 0
-        total_caracteres += linea.chomp.length
-    end
+    total_caracteres += linea.chomp.length
     total_caracteres_sin_espacios += linea.gsub(/\s+/, "").length
     total_lineas += 1
     total_palabras += linea.split.size
